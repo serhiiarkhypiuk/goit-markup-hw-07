@@ -7,6 +7,8 @@
   --main-backgroung: #ffffff;
   --light-background: #f5f4fa;
   --light-icons: #afb1b8;
+  --button-active: #188ce8;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------------------- */
@@ -27,16 +29,24 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 button {
   cursor: pointer;
+  font-family: inherit;
+  border: none;
+  border-radius: 4px;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -47,14 +57,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-}
-
-button {
-  font-family: inherit;
-}
-
-.list {
-  list-style-type: none;
 }
 
 .visually-hidden {
@@ -74,50 +76,44 @@ button {
 
 .container {
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0px 15px;
   margin: 0 auto;
-  /* outline: 2px solid red; */
+  outline: 2px solid red;
 }
 
 /* ------------------------- */
 
 /* Описание стилей хедера */
 
-.header .container,
-.site-nav,
-.contact-nav {
+.page-header,
+.page-header__container,
+.page-header__havigation,
+.page-header__pages,
+.page-header__contacts {
   display: flex;
   align-items: center;
 }
 
-.header {
+.page-header {
   border-bottom: 1px solid #ececec;
 }
 
-.header .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+.page-header__logofirstpart {
+  padding-top: 24px 0px 25px 0px;
   font-family: 'Raleway';
   font-weight: bold;
   font-size: 26px;
   line-height: 1.2;
-  /* identical to box height */
   color: var(--accent-text-color);
-  text-decoration: none;
   margin-right: 93px;
 }
 
-.logo-header {
+.page-header__logosecondpart {
   font-family: 'Raleway';
   color: var(--main-text-color);
 }
 
-.site-nav .list {
-  display: flex;
-}
-
-.site-nav .list .link {
+.page-header__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -126,26 +122,22 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
-  text-decoration: none;
   position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition);
 }
 
-.contact-nav {
+.page-header__contacts {
   margin-left: auto;
 }
 
-.site-nav .list .list-item:not(:last-child),
-.contact-nav .list-item:not(:last-child) {
+.page-header__item:not(:last-child),
+.page-header__contact:not(:last-child) {
   margin-right: 50px;
 }
 
-.contact-nav .list-item .link {
+.page-header__contactlink {
   display: flex;
   justify-content: center;
-}
-
-.contact-nav .list-item .link {
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -153,28 +145,27 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
-  text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail-icon,
-.smartphone-icon {
+.page-header__mail-icon,
+.page-header__smartphone-icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
-.contact-nav .link:hover,
-.contact-nav .link:focus,
-.site-nav .link:hover,
-.site-nav .link:focus {
+.page-header__link:hover,
+.page-header__contactlink:hover,
+.page-header__link:focus,
+.page-header__contactlink:focus {
   color: var(--accent-text-color);
 }
 
-.site-nav .link.current {
+.page-header__link--current {
   color: var(--accent-text-color);
 }
 
-.site-nav .link.current::after {
+.page-header__link--current::after {
   display: flex;
   content: '';
   position: absolute;
@@ -190,62 +181,54 @@ button {
 
 /* Описание стилей футера */
 
-.footer .logo {
-  font-family: 'Raleway';
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.2;
-  color: var(--accent-text-color);
-  text-decoration: none;
-}
-
-.footer .logo-footer {
-  color: #ffffff;
+.page-footer__logosecondpart {
+  color: var(--main-backgroung);
   font-family: 'Raleway';
 }
 
-.footer {
+.page-footer {
   background-color: var(--secondary-backgroung);
-  display: flex;
   padding: 60px 0px;
 }
 
-.footer .contacts .list {
+.page-footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-footer__contactslist {
   margin-top: 20px;
   font-style: normal;
 }
 
-.footer .contacts .list .text {
-  text-decoration: none;
+.page-footer__contactstext {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   /* or 171% */
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition);
 }
 
-.footer .contacts .item:not(:last-child) {
+.page-footer__contactsitem:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.footer .contacts .list .text:hover,
-.footer .contacts .list .text:focus {
+.page-footer__contactstext:hover,
+.page-footer__contactstext:focus {
   color: var(--main-backgroung);
 }
 
-.footer .contacts .list .current {
+.page-footer__contactstext--current {
   color: var(--main-backgroung);
 }
 
-.footer .contacts .list .item:hover,
-.footer .contacts .list .item:focus,
-.footer .contacts .list .item:hover,
-.footer .contacts .list .item:focus {
+.page-footer__contactsitem:hover,
+.page-footer__contactsitem:focus {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer .footer-header {
+.page-footer__header {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -255,18 +238,7 @@ button {
   margin-bottom: 20px;
 }
 
-.footer .container {
-  display: flex;
-  align-items: baseline;
-}
-
-.footer .social-list {
-  display: flex;
-  align-items: center;
-  margin-left: 70px;
-}
-
-.footer .social-list .social-item {
+.page-footer .socials__item {
   border-radius: 50%;
   align-items: center;
   display: flex;
@@ -274,52 +246,38 @@ button {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer .social-list .social-item:not(:last-child) {
-  margin-right: 10px;
+.page-footer .socials__list {
+  margin: 0px 93px 0px 70px;
 }
 
-.footer .social-list .social-item .social-link {
-  display: block;
-  height: 44px;
-  width: 44px;
-  padding: 12px 12px;
-  color: var(--main-backgroung);
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.page-footer .socials__instagram-icon,
+.page-footer .socials__twitter-icon,
+.page-footer .socials__facebook-icon,
+.page-footer .socials__linkedin-icon {
+  fill: var(--main-backgroung);
 }
 
-.footer .instagram-icon,
-.footer .twitter-icon,
-.footer .facebook-icon,
-.footer .linkedin-icon {
-  fill: currentColor;
-}
-
-.footer .social-list .social-item .social-link:hover,
-.footer .social-list .social-item .social-link:focus {
+.page-footer .socials__link:hover,
+.page-footer .socials__link:focus {
   background-color: var(--accent-text-color);
-  color: var(--main-backgroung);
-  border-radius: 50%;
 }
 
-.footer .subscription {
+.page-footer__subscription {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--main-backgroung);
-  margin-bottom: 20px;
-  margin-left: 93px;
+  margin: 0px 0px 20px 93px;
 }
 
-.footer .label {
+.subscription {
   display: flex;
 }
 
-.footer .label .email {
+.subscription__email {
   padding: 15px 16px;
   margin-right: 12px;
-  margin-left: 93px;
   width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -328,24 +286,19 @@ button {
   color: var(--main-backgroung);
 }
 
-.footer .label .button {
+.subscription__button {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   background: var(--accent-text-color);
-  border: none;
-  border-radius: 4px;
-  color: inherit;
   padding: 10px 29px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition);
   display: flex;
-  align-items: center;
-  text-align: center;
   color: var(--main-backgroung);
 }
 
-.footer .label .send-icon {
+.subscription__send-icon {
   margin-left: 10px;
   fill: var(--main-backgroung);
 }
@@ -361,39 +314,35 @@ button {
   background-size: cover;
   max-width: 1600px;
   background-position: center;
-  color: #ffffff;
+  color: var(--main-backgroung);
   text-align: center;
-  align-items: center;
   padding: 200px 0px;
   margin: 0 auto;
 }
 
-.hero-text {
+.hero__header {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /* or 136% */
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin: 0px auto 30px;
 }
 
-.hero-button {
+.hero__button {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   background: var(--accent-text-color);
-  border: none;
-  border-radius: 4px;
   color: inherit;
   padding: 10px 32px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition);
 }
 
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #188ce8;
+.hero__button:hover,
+.hero__button:focus {
+  background-color: var(--button-active);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -562,8 +511,6 @@ button {
   line-height: 1.87;
   letter-spacing: 0.06em;
   background: var(--accent-text-color);
-  border: none;
-  border-radius: 4px;
   color: var(--main-backgroung);
   padding: 10px 55px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -579,17 +526,17 @@ button {
 
 /* Описание стилей секции особенностей */
 
-.qualities .list {
+.qualities__list {
   display: flex;
   margin: -15px;
 }
 
-.qualities .list .item {
+.qualities__item {
   margin: 15px;
   width: calc((100% -120px) / 4);
 }
 
-.qualities .list .item .qualities-background {
+.qualities__background {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -600,7 +547,7 @@ button {
   margin-bottom: 30px;
 }
 
-.qualities .list .item .title {
+.qualities__title {
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 14px;
@@ -608,7 +555,7 @@ button {
   text-transform: uppercase;
 }
 
-.qualities .list .item .text {
+.qualities__text {
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-text-color);
@@ -622,7 +569,7 @@ button {
   padding-top: 0px;
 }
 
-.work .header {
+.work__header {
   margin-bottom: 50px;
   font-weight: bold;
   font-size: 36px;
@@ -631,20 +578,19 @@ button {
   border: none;
 }
 
-.work .list {
+.work__list {
   display: flex;
 }
 
-.work .example:not(:last-child) {
+.work__example:not(:last-child) {
   margin-right: 30px;
 }
 
-.work .list .example .thumb {
+.work__thumb {
   position: relative;
-  /* overflow: hidden; */
 }
 
-.work .list .example .thumb .label {
+.work__label {
   color: var(--main-backgroung);
   font-weight: bold;
   font-size: 14px;
@@ -658,107 +604,85 @@ button {
   left: 0;
   padding: 27px 0px;
   background-color: rgba(47, 48, 58, 0.8);
-  color: #fff;
 }
 
 /* --------------------------------- */
 
 /* Описание стилей секции наша команда */
 
-.our-team {
+.team {
   background-color: var(--light-background);
   align-items: center;
 }
 
-.our-team .header {
+.team__header {
   margin-bottom: 50px;
-  font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  border: none;
 }
 
-.our-team .list {
+.team__list {
   display: flex;
 }
 
-.our-team .list .item:not(:last-child) {
+.member:not(:last-child) {
   margin-right: 30px;
 }
 
-.our-team .list .item {
+.member {
   background-color: var(--main-backgroung);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.18;
 }
 
-.our-team .list .item .title {
-  margin-top: 30px;
-  margin-bottom: 10px;
+.member__title {
+  margin: 30px 0px 10px 0px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  /* identical to box height */
-  text-align: center;
 }
 
-.our-team .list .item .role {
+.member__role {
   margin-bottom: 16px;
-  font-size: 16px;
-  line-height: 1.18;
-  /* identical to box height */
-  text-align: center;
   color: var(--secondary-text-color);
 }
 
-.our-team .list .item .social-links {
+.socials__list {
   display: flex;
-  justify-content: center;
+  margin: 0px 32px 30px 32px;
 }
 
-.our-team .list .item .social-links .social-list {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.our-team .list .item .social-links .social-list .social-item {
-  border-radius: 50%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.our-team .list .item .social-links .social-list .social-item:not(:last-child) {
+.socials__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.our-team .list .item .social-links .social-list .social-item .social-link {
+.socials__link {
   display: block;
   height: 44px;
   width: 44px;
   padding: 12px 12px;
   color: var(--light-icons);
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition), color var(--transition);
 }
 
-.instagram-icon,
-.twitter-icon,
-.facebook-icon,
-.linkedin-icon {
+.socials__instagram-icon,
+.socials__twitter-icon,
+.socials__facebook-icon,
+.socials__linkedin-icon {
   fill: currentColor;
 }
 
-.our-team .list .item .social-links .social-list .social-item .social-link:hover,
-.our-team .list .item .social-links .social-list .social-item .social-link:focus {
+.socials__link:hover,
+.socials__link:focus {
   background-color: var(--accent-text-color);
   color: var(--main-backgroung);
 }
+
 /* ----------------------------------- */
 
 /* Описание стилей секции клиентов */
@@ -767,8 +691,7 @@ button {
   text-align: center;
 }
 
-.clients-header {
-  font-family: Roboto;
+.clients__header {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;
@@ -776,12 +699,11 @@ button {
   margin-bottom: 50px;
 }
 
-.clients .clients-links .clients-list {
+.clients__list {
   display: flex;
-  align-self: center;
 }
 
-.clients .clients-links .clients-link {
+.clients__link {
   padding: 16px 32px;
   width: 170px;
   height: 92px;
@@ -789,21 +711,20 @@ button {
   color: var(--light-icons);
   border: 1px solid var(--light-icons);
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition), border-color var(--transition);
 }
 
-.clients .clients-links .clients-item:not(:last-child) {
+.clients__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.clients .clients-links .clients-link:hover,
-.clients .clients-links .clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   color: var(--accent-text-color);
   border-color: var(--accent-text-color);
 }
 
-.client-icon {
+.clients__icon {
   fill: currentColor;
 }
 
@@ -811,40 +732,36 @@ button {
 
 /* Фильтр на странице портфолио */
 
-.filter-list {
+.portfolio__filter {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
-  list-style-type: none;
 }
 
-.filter-list .item .filter-button {
+.portfolio__button {
   padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   background-color: var(--light-background);
-  border-radius: 4px;
-  border: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition), background-color var(--transition),
+    box-shadow var(--transition);
 }
 
-.filter-list .item:not(:last-child) {
+.portfolio__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.filter-list .item .filter-button:hover,
-.filter-list .item .filter-button:focus {
+.portfolio__button:hover,
+.portfolio__button:focus {
   color: var(--main-backgroung);
   background-color: var(--accent-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filter-list .item .filter-active {
+.portfolio__button--active {
   color: var(--main-backgroung);
   background-color: var(--accent-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -853,57 +770,53 @@ button {
 
 /* Описание стилей секции портфолио */
 
-.portfolio .list {
+.portfolio__examples {
   display: flex;
   flex-wrap: wrap;
   margin: calc(-1 * 15px);
 }
 
-.portfolio .list .item {
+.portfolio__example {
   margin: 15px;
   background-color: var(--main-backgroung);
   border-radius: 0px 0px 4px 4px;
   flex-basis: calc((100% - 90px) / 3);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition);
   overflow: hidden;
 }
 
-.portfolio .list .item:hover,
-.portfolio .list .item:focus {
+.portfolio__example:hover,
+.portfolio__example:focus {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio .list .item:nth-child(3) {
-  margin-right: 0;
-}
-
-.portfolio .list .card {
+.portfolio__card {
   padding: 20px 24px;
   border-radius: 0px 0px 4px 4px;
   border: 1px solid #eeeeee;
   border-top: 0;
 }
 
-.portfolio .list .item .title {
+.portfolio__title {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.portfolio .list .item .description {
+.portfolio__description {
   margin-top: 4px;
   font-size: 16px;
   line-height: 1.875;
   color: var(--secondary-text-color);
 }
 
-.portfolio .list .item .frame .overlay {
+.portfolio__overlay {
   padding: 63px 24px;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition);
   left: 0;
   top: 0;
   position: absolute;
@@ -912,21 +825,19 @@ button {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.portfolio .list .item:hover .overlay,
-.portfolio .list .item:focus .overlay {
+.portfolio__example:hover .portfolio__overlay,
+.portfolio__example:focus .portfolio__overlay {
   transform: translateY(0%);
 }
 
-.portfolio .list .item .frame {
+.portfolio__frame {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio .list .item .frame .overlay .img-text {
+.portfolio__img-text {
   font-size: 18px;
-  font-style: normal;
   line-height: 1.55;
-  /* or 156% */
   color: var(--main-backgroung);
 }
 
