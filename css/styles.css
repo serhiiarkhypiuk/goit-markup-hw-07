@@ -355,7 +355,7 @@ body {
   transition: opacity 500ms, visibility 500ms;
 }
 
-.backdrop.is-hidden .modal {
+.modal {
   transform: scale(0.5);
 }
 
@@ -375,19 +375,15 @@ body {
   text-align: center;
 }
 
-.modal .form .header {
+.form__header {
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
   color: var(--main-text-color);
-  border: none;
   margin-bottom: 12px;
 }
 
-.modal .form {
-}
-
-.modal .modal-close {
+.modal__close {
   padding: 6px;
   width: 30px;
   height: 30px;
@@ -395,19 +391,16 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 8px;
   right: 8px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition), fill var(--transition);
 }
 
-.modal .modal-close:hover,
-.modal .modal-close:focus,
-.modal .close-icon:hover,
-.modal .close-icon:focus {
+.modal__close:hover,
+.modal__close:focus,
+.modal__close-icon:hover,
+.modal__close-icon:focus {
   border-color: var(--accent-text-color);
   fill: var(--accent-text-color);
 }
@@ -418,7 +411,7 @@ body {
   visibility: hidden;
 }
 
-.modal .form .field .label {
+.form__label {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -427,12 +420,12 @@ body {
   display: flex;
 }
 
-.modal .form .field {
+.form__field {
   position: relative;
   display: block;
 }
 
-.modal .form .field .modal-icon {
+.form__icon {
   display: inline-block;
   position: absolute;
   top: 11px;
@@ -440,21 +433,16 @@ body {
   transform: translateY(95%);
 }
 
-.modal .form .field input:focus {
+.form__input:focus {
   border-color: var(--accent-text-color);
   outline: none;
 }
 
-.modal .form .field textarea:focus {
-  border-color: var(--accent-text-color);
-  outline: none;
-}
-
-.modal .form .field input:focus ~ .modal-icon {
+.form__input:focus ~ .form__icon {
   fill: var(--accent-text-color);
 }
 
-.modal .form .field textarea {
+.form__field textarea {
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   margin-bottom: 20px;
@@ -466,45 +454,42 @@ body {
   resize: none;
 }
 
-.modal .form .field input {
+.form__input {
   height: 40px;
   width: 100%;
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   position: relative;
-  padding-top: 12px;
-  padding-right: 12px;
-  padding-bottom: 12px;
-  padding-left: 42px;
+  padding: 12px 12px 12px 42px;
 }
 
-.modal .form .checkbox-label {
+.agreement {
   display: inline-flex;
   align-items: center;
   color: var(--secondary-text-color);
 }
 
-.modal .form .checkbox-label .check-icon {
+.agreement__icon {
   margin-right: 7px;
   fill: none;
   border: 2px solid var(--main-text-color);
   border-radius: 2px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition), background-color var(--transition),
+    fill var(--transition);
 }
 
-.modal .form .checkbox-label .checkbox:checked ~ .check-icon {
+.agreement__checkbox:checked ~ .agreement__icon {
   border: transparent;
   fill: var(--main-backgroung);
   background-color: var(--accent-text-color);
 }
 
-.modal .form .agreementlink {
+.agreement__link {
   color: var(--accent-text-color);
 }
 
-.modal .form .button {
+.modal__button {
   margin-top: 30px;
   font-weight: bold;
   font-size: 16px;
@@ -513,13 +498,13 @@ body {
   background: var(--accent-text-color);
   color: var(--main-backgroung);
   padding: 10px 55px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.modal .form .button:hover,
-.modal .form .button:focus {
-  background-color: #188ce8;
+.agreement__button:hover,
+.agreement__button:focus {
+  background-color: var(--button-active);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 /* -------------------------------------------------- */

@@ -410,52 +410,52 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="modal-close" data-modal-close>
-                <svg class="close-icon" width="18px" height="18px" >
+            <button type="button" class="modal__close" data-modal-close>
+                <svg class="modal__close-icon" width="18px" height="18px" >
                     <use href="./images/sprite.svg#icon-close" />
                 </svg>
             </button>
             <form class="form" action="#" autocomplete="off">
-                <h2 class="header">Оставьте свои данные, мы вам перезвоним</h2>
-                <label class="field">
-                    <span class="label">Имя</span>
-                    <input class="name" type="text" name="name" />
-                    <svg class="person-icon modal-icon" width="18px" height=18px>
+                <h2 class="form__header">Оставьте свои данные, мы вам перезвоним</h2>
+                <label class="form__field">
+                    <span class="form__label">Имя</span>
+                    <input class="form__input" type="text" name="name" />
+                    <svg class="form__icon" width="18px" height=18px>
                         <use href="./images/sprite.svg#icon-person-black"></use>
                     </svg>
                 </label>  
                                 
-                <label class="field">
-                    <span class="label">Телефон</span>
-                    <input class="telephone" type="text" name="tel" />
-                    <svg class="phone-icon modal-icon" width="18px" height=18px>
+                <label class="form__field">
+                    <span class="form__label">Телефон</span>
+                    <input class="form__input" type="text" name="tel" />
+                    <svg class="form__icon" width="18px" height=18px>
                         <use href="./images/sprite.svg#icon-phone-black"></use>
                     </svg>
                 </label>
 
-                <label class="field">
-                    <span class="label">Почта</span>
-                    <input class="email" type="text" name="email" />
-                    <svg class="email-icon modal-icon" width="18px" height=18px>
+                <label class="form__field">
+                    <span class="form__label">Почта</span>
+                    <input class="form__input" type="text" name="email" />
+                    <svg class="form__icon" width="18px" height=18px>
                         <use href="./images/sprite.svg#icon-email-black"></use>
                     </svg>
                 </label>
                     
-                <label class="field">
-                    <span class="label">Комментарий</span>
-                    <textarea class="comment" name="comment" placeholder="Введите текст"></textarea>
+                <label class="form__field">
+                    <span class="form__label">Комментарий</span>
+                    <textarea class="form__input" name="comment" placeholder="Введите текст"></textarea>
                 </label>
 
-                <label class="checkbox-label">
-                    <input class="checkbox visually-hidden" type="checkbox" name="agreement"/>
-                    <svg class="check-icon" width="16px" height="15px">
+                <label class="agreement">
+                    <input class="agreement__checkbox visually-hidden" type="checkbox" name="agreement"/>
+                    <svg class="agreement__icon" width="16px" height="15px">
                         <use href="./images/sprite.svg#icon-checked"></use>
                     </svg>
                     Соглашаюсь с рассылкой и принимаю&nbsp;
-                    <a href="#" target="_blank" class="agreementlink" rel="noreferrer noopener">Условия договора</a>
+                    <a href="#" target="_blank" class="agreement__link" rel="noreferrer noopener">Условия договора</a>
                 </label>
                     
-                <button type="submit" class="button">Отправить</button>
+                <button type="submit" class="modal__button">Отправить</button>
 
             </form>
         </div>
