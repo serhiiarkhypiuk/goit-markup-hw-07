@@ -223,11 +223,12 @@ body {
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
+  color: #212121;
 }
 
 .qualities__text {
   line-height: 1.71;
-  color: #2f303a;
+  color: #757575;
 }
 
 /* Описание стилей секции чем мы занимаемся */
@@ -301,11 +302,12 @@ body {
 .member__title {
   margin: 30px 0px 10px 0px;
   font-weight: 500;
+  color: #212121;
 }
 
 .member__role {
   margin-bottom: 16px;
-  color: #2f303a;
+  color: #757575;
 }
 
 .member:not(:last-child) {

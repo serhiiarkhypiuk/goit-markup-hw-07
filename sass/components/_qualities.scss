@@ -24,9 +24,10 @@
     font-weight: bold;
     line-height: 1.14;
     text-transform: uppercase;
+    color: $main-text-color;
   }
   &__text {
     line-height: 1.71;
-    color: $secondary-backgroung;
+    color: $secondary-text-color;
   }
 }

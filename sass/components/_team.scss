@@ -26,10 +26,11 @@
   &__title {
     margin: 30px 0px 10px 0px;
     font-weight: 500;
+    color: $main-text-color;
   }
   &__role {
     margin-bottom: 16px;
-    color: $secondary-backgroung;
+    color: $secondary-text-color;
   }
   &:not(:last-child) {
     margin-right: 30px;
