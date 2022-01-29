@@ -88,6 +88,9 @@
     outline: none;
     background-color: $secondary-backgroung;
     color: $main-backgroung;
+    &:focus {
+      border-color: $main-backgroung;
+    }
   }
   &__button {
     font-weight: bold;
@@ -99,6 +102,10 @@
     transition: background-color $transition;
     display: flex;
     color: $main-backgroung;
+    &:hover,
+    &:focus {
+      background: $button-active;
+    }
   }
   &__send-icon {
     margin-left: 10px;
