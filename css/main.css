@@ -37,7 +37,7 @@ a {
 body {
   background-color: var(--main-backgroung);
   color: var(--main-text-color);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -86,8 +86,8 @@ body {
 }
 
 .page-header__logofirstpart {
-  padding-top: 24px 0px 25px 0px;
-  font-family: "Raleway", sans-serif;
+  padding: 24px 0px 25px 0px;
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.2;
@@ -96,7 +96,7 @@ body {
 }
 
 .page-header__logosecondpart {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #212121;
 }
 
@@ -128,7 +128,8 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.page-header__mail-icon, .page-header__smartphone-icon {
+.page-header__mail-icon,
+.page-header__smartphone-icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -149,18 +150,23 @@ body {
   left: 0px;
 }
 
-.page-header__item:not(:last-child), .page-header__contact:not(:last-child) {
+.page-header__item:not(:last-child),
+.page-header__contact:not(:last-child) {
   margin-right: 50px;
 }
 
-.page-header__link:hover, .page-header__link:focus, .page-header__contactlink:hover, .page-header__contactlink:focus {
+.page-header__link:hover,
+.page-header__link:focus,
+.page-header__contactlink:hover,
+.page-header__contactlink:focus {
   color: #2196f3;
 }
 
 /* Описание стилей секции герой */
 .hero {
   background-color: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1600px;
@@ -191,7 +197,8 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero__button:hover, .hero__button:focus {
+.hero__button:hover,
+.hero__button:focus {
   background-color: #188ce8;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
@@ -291,7 +298,8 @@ body {
 
 .member {
   background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
   font-size: 16px;
@@ -317,7 +325,10 @@ body {
   margin: 0px 32px 30px;
 }
 
-.socials__instagram-icon, .socials__twitter-icon, .socials__facebook-icon, .socials__linkedin-icon {
+.socials__instagram-icon,
+.socials__twitter-icon,
+.socials__facebook-icon,
+.socials__linkedin-icon {
   fill: currentColor;
 }
 
@@ -328,10 +339,12 @@ body {
   padding: 12px 12px;
   color: #afb1b8;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials__link:hover, .socials__link:focus {
+.socials__link:hover,
+.socials__link:focus {
   background-color: #2196f3;
   color: #ffffff;
 }
@@ -369,10 +382,12 @@ body {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients__link:hover, .clients__link:focus {
+.clients__link:hover,
+.clients__link:focus {
   color: #2196f3;
   border-color: #2196f3;
 }
@@ -394,7 +409,7 @@ body {
 
 .page-footer__logosecondpart {
   color: #ffffff;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .page-footer__header {
@@ -417,11 +432,14 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.page-footer__contactstext:hover, .page-footer__contactstext:focus, .page-footer__contactstext--current {
+.page-footer__contactstext:hover,
+.page-footer__contactstext:focus,
+.page-footer__contactstext--current {
   color: #ffffff;
 }
 
-.page-footer__contactsitem:hover, .page-footer__contactsitem:focus {
+.page-footer__contactsitem:hover,
+.page-footer__contactsitem:focus {
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -450,11 +468,15 @@ body {
   margin: 0px 93px 0px 70px;
 }
 
-.page-footer .socials__link:hover, .page-footer .socials__link:focus {
+.page-footer .socials__link:hover,
+.page-footer .socials__link:focus {
   background-color: #2196f3;
 }
 
-.page-footer .socials__instagram-icon, .page-footer .socials__twitter-icon, .page-footer .socials__facebook-icon, .page-footer .socials__linkedin-icon {
+.page-footer .socials__instagram-icon,
+.page-footer .socials__twitter-icon,
+.page-footer .socials__facebook-icon,
+.page-footer .socials__linkedin-icon {
   fill: #ffffff;
 }
 
@@ -511,7 +533,8 @@ body {
   min-height: 581px;
   background-color: #ffffff;
   border-radius: 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -532,15 +555,18 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__close:hover, .modal__close:focus {
+.modal__close-icon:hover,
+.modal__close-icon:focus {
   border-color: #2196f3;
   fill: #2196f3;
 }
 
-.modal__close:hover-icon:hover, .modal__close:hover-icon:focus, .modal__close:focus-icon:hover, .modal__close:focus-icon:focus {
+.modal__close-icon:hover,
+.modal__close-icon:focus {
   border-color: #2196f3;
   fill: #2196f3;
 }
@@ -558,7 +584,8 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.modal__button:hover, .modal__button:focus {
+.modal__button:hover,
+.modal__button:focus {
   background-color: #188ce8;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
@@ -635,7 +662,8 @@ body {
   fill: none;
   border: 2px solid #212121;
   border-radius: 2px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agreement__checkbox:checked ~ .agreement__icon {
@@ -668,13 +696,18 @@ body {
   line-height: 1.62;
   text-align: center;
   background-color: #f5f4fa;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio__button:hover, .portfolio__button:focus, .portfolio__button--active {
+.portfolio__button:hover,
+.portfolio__button:focus,
+.portfolio__button--active {
   color: #ffffff;
   background-color: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio__item:not(:last-child) {
@@ -697,12 +730,15 @@ body {
   overflow: hidden;
 }
 
-.portfolio__example:hover, .portfolio__example:focus {
+.portfolio__example:hover,
+.portfolio__example:focus {
   cursor: pointer;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio__example:hover .portfolio__overlay, .portfolio__example:focus .portfolio__overlay {
+.portfolio__example:hover .portfolio__overlay,
+.portfolio__example:focus .portfolio__overlay {
   transform: translateY(0%);
 }
 

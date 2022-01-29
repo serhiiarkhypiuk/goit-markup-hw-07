@@ -42,16 +42,16 @@
     top: 8px;
     right: 8px;
     transition: border-color $transition, fill $transition;
-    &:hover,
-    &:focus {
-      border-color: $accent-text-color;
-      fill: $accent-text-color;
-      &-icon {
-        &:hover,
-        &:focus {
-          border-color: $accent-text-color;
-          fill: $accent-text-color;
-        }
+    &-icon {
+      &:hover,
+      &:focus {
+        border-color: $accent-text-color;
+        fill: $accent-text-color;
+      }
+      &:hover,
+      &:focus {
+        border-color: $accent-text-color;
+        fill: $accent-text-color;
       }
     }
   }
